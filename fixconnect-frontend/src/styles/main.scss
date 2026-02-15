@@ -1,0 +1,20 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100dvh;
+  line-height: 1.5;
+  font-family: system-ui, sans-serif;
+  background-color: $success;
+}
