@@ -5,14 +5,18 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDateTime;
-
+import  com.fixconnect.utils.RandomIdGen;
 @Entity(name = "users")
 @Data
 public class User {
-
+    private static final String PREFIX = "USER_";
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  Long userId;
+    private  String userId;
+
+    @PrePersist
+    void generateId(){
+        this.userId = RandomIdGen.gen(PREFIX);
+    }
 
     @Column(nullable = false,length = 100)
     private String name;
