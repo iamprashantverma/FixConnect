@@ -1,0 +1,23 @@
+target/
+build/
+.mvn/wrapper/maven-wrapper.jar
+src/test
+
+# IDE files
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment / profiles
+src/main/resources/application-*.yaml
+
